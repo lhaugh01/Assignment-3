@@ -10,13 +10,22 @@
     
     <script type="text/javascript">
         console.log("Hello from JavaScript!");
+
+        function showMoney(total){
+            return Math.round(amount * 100) / 100;
+        }
         const hotdog_price = 4.99;
         const frenchfry_price = 3.99;
         const drink_price = 1.79;
         var numdogs = prompt("How many hot dogs do you want", "0");
         var numfries = prompt("How many french fries do you want", "0");
         var numdrinks = prompt("How many drinks do you want", "0");
-        
+        var totalcost = numdogs * hotdog_price + numfries * frenchfry_price + numdrinks * drink_price;
+        var discount = 0;
+        if(totalcost => 30){
+            discount = totalcost / 10;
+        }
+        var final_total = showMoney((totalcost - discount) * 1.065);
         
     </script>
 </body>
